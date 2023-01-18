@@ -1,7 +1,15 @@
-// JavaScript code to toggle the visibility of the menu when the menu icon is clicked
-var menuIcon = document.getElementById("menu-icon");
-var navMenu = document.getElementById("nav-menu");
+// Get the contact form
+const form = document.querySelector("form");
 
-menuIcon.addEventListener("click", function () {
-    navMenu.classList.toggle("show");
+// Add a submit event listener to the form
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Get the input values
+    const name = document.querySelector("#name").value;
+    const email = document.querySelector("#email").value;
+    const message = document.querySelector("#message").value;
+
+    // Show an alert with the input values
+    alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
 });
